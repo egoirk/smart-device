@@ -1,0 +1,108 @@
+.about {
+  padding-top: 60px;
+  padding-bottom: 100px;
+
+  @include vp-1023 {
+    padding-top: 0;
+    padding-bottom: 80px;
+  }
+
+  @include vp-767 {
+    padding-top: 13px;
+    padding-bottom: 80px;
+  }
+}
+
+.about__container {
+  display: grid;
+  grid-template-columns: 150px auto;
+  gap: 100px;
+
+  @include vp-1023 {
+    gap: 25px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.about h2 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  font-size: 36px;
+  line-height: 51px;
+  margin-bottom: 12px;
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 39px;
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+}
+
+.about p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 18px;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: $black-pearl;
+
+  @include vp-767 {
+    margin-bottom: 17px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.about__img {
+  height: 320px;
+  width: 150px;
+  margin: 0;
+
+  @include vp-1023 {
+    margin-left: -4px;
+    margin-top: 5px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.content__hidden {
+  display: none;
+}
+
+.about__button {
+  margin-top: 20px;
+  min-width: 180px;
+  line-height: 17px;
+  border: 1px solid #00b2ff;
+  color: #00b2ff;
+  background-color: #f8fdff;
+  justify-content: center;
+  padding: 13px 25px;
+  letter-spacing: 0.05em;
+
+  @include vp-1023 {
+    margin-top: 0;
+  }
+
+  @include vp-767 {
+    min-width: 160px;
+    padding: 8px 15px;
+    margin-top: 19px;
+  }
+}
+
+.about button:hover {
+  background-color: #00b2ff;
+  color: #f8fdff;
+  opacity: 1;
+}

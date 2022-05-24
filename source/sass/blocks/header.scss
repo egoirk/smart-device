@@ -1,0 +1,92 @@
+.header {
+  padding-top: 305px;
+  height: 880px;
+  background-color: $color-tory-blue;
+  background-image: $header-bg, url("/img/header-bg.jpg");
+  background-size: cover;
+
+  @include vp-1023 {
+    background-image: $header-bg, url("/img/header-bg-tablet.jpg");
+    padding-top: 180px;
+    height: 640px;
+  }
+
+  @include vp-767 {
+    background-image: $header-bg, url("/img/header-bg-mobile.jpg");
+    padding-top: 150px;
+    height: 560px;
+  }
+
+  @include retina {
+    @include vp-1024 {
+      background-image: $header-bg, url("/img/header-bg@2x.jpg");
+    }
+
+    @include vp-1023 {
+      background-image: $header-bg, url("/img/header-bg-tablet@2x.jpg");
+    }
+
+    @include vp-767 {
+      background-image: $header-bg, url("/img/header-bg-mobile@2x.jpg");
+    }
+  }
+}
+
+.header__content {
+  color: $color-default-white;
+  padding: 0 125px;
+}
+
+.header__title {
+  margin: 0;
+  line-height: 94px;
+  font-weight: 700;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 32px;
+  font-size: 80px;
+
+  @include vp-1023 {
+    margin-bottom: 2px;
+    font-size: 64px;
+    line-height: 75px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 8px;
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+.header__text {
+  margin: 0;
+  line-height: 1.55;
+  font-family: "PT Mono", sans-serif;
+  margin-bottom: 45px;
+  max-width: 685px;
+  font-size: 1.38rem;
+
+  @include vp-1023 {
+    margin-bottom: 55px;
+    max-width: 685px;
+    font-size: 22px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 45px;
+    max-width: 425px;
+    font-size: 14px;
+  }
+}
+
+.header__button {
+  @include vp-1023 {
+    margin-left: 45px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+  }
+}

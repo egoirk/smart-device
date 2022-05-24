@@ -1,0 +1,51 @@
+.contact {
+  display: flex;
+  line-height: 1.12;
+  font-family: "PT Mono", monospace;
+  text-decoration: none;
+  color: $color-default-white;
+}
+
+.contact:hover .contact__label,
+.contact:active .contact__label {
+  text-decoration: underline;
+}
+
+.contact--phone {
+  @include vp-1023 {
+    margin-right: 55px;
+  }
+
+  @include vp-767 {
+    margin-right: 0;
+  }
+}
+
+.contact--mail::before,
+.contact--phone::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  align-self: center;
+  margin-right: 15px;
+
+  @include vp-1023 {
+    align-self: flex-start;
+    margin: 0;
+  }
+}
+
+.contact--mail::before {
+  background: url("/img/svg/icon/email.svg");
+}
+
+.contact--phone::before {
+  background: url("/img/svg/icon/phone.svg");
+}
+
+.contact__label {
+  @include vp-1023 {
+    display: none;
+  }
+}

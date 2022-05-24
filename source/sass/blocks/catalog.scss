@@ -1,0 +1,163 @@
+.catalog {
+  padding-top: 70px;
+  padding-bottom: 140px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  background-color: $color-tory-blue;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    padding-top: 55px;
+    padding-bottom: 75px;
+  }
+
+  @include vp-767 {
+    padding-top: 47px;
+    padding-bottom: 85px;
+  }
+}
+
+.catalog h2 {
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+
+  @include vp-1023 {
+    margin-bottom: 37px;
+  }
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 30px;
+  }
+}
+
+.catalog__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 7%;
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+}
+
+.catalog__item {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  min-height: 650px;
+  font-size: 14px;
+  line-height: 19px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    right: 0;
+    background-color: $deep-sky-blue;
+    background-image: url("/img/svg/icon/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 56% 50%;
+    background-size: 20px 8px;
+    z-index: 1;
+  }
+
+  @include vp-1023 {
+    max-width: none;
+    width: 100%;
+    min-height: 250px;
+  }
+
+  @include vp-767 {
+    &::after {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.catalog__item a {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: auto;
+  content: "";
+  background-color: rgba(214, 37, 37, 0);
+}
+
+.catalog__item a::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(4, 24, 39, 0.5);
+}
+
+.catalog__cards {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 650px;
+
+  @include vp-1023 {
+    height: 250px;
+  }
+}
+
+.catalog__cards img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.catalog__item h3 {
+  color: $color-default-white;
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  position: absolute;
+  top: 48px;
+  left: 42px;
+  width: 50%;
+
+  @include vp-1023 {
+    top: 38px;
+    left: 45px;
+    width: 21%;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    top: 25px;
+    left: 30px;
+    width: 41%;
+    max-width: 150px;
+  }
+}
+
+.catalog__item:hover {
+  transform: scale(1.05);
+}
