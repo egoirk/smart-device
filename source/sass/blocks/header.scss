@@ -2,32 +2,32 @@
   padding-top: 305px;
   height: 880px;
   background-color: $color-tory-blue;
-  background-image: $header-bg, url("/img/header-bg.jpg");
+  background-image: $header-bg, url("../img/header-bg.jpg");
   background-size: cover;
 
   @include vp-1023 {
-    background-image: $header-bg, url("/img/header-bg-tablet.jpg");
+    background-image: $header-bg, url("../img/header-bg-tablet.jpg");
     padding-top: 180px;
     height: 640px;
   }
 
   @include vp-767 {
-    background-image: $header-bg, url("/img/header-bg-mobile.jpg");
+    background-image: $header-bg, url("../img/header-bg-mobile.jpg");
     padding-top: 150px;
     height: 560px;
   }
 
   @include retina {
     @include vp-1024 {
-      background-image: $header-bg, url("/img/header-bg@2x.jpg");
+      background-image: $header-bg, url("../img/header-bg@2x.jpg");
     }
 
     @include vp-1023 {
-      background-image: $header-bg, url("/img/header-bg-tablet@2x.jpg");
+      background-image: $header-bg, url("../img/header-bg-tablet@2x.jpg");
     }
 
     @include vp-767 {
-      background-image: $header-bg, url("/img/header-bg-mobile@2x.jpg");
+      background-image: $header-bg, url("../img/header-bg-mobile@2x.jpg");
     }
   }
 }
