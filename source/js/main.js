@@ -1,3 +1,14 @@
+import {iosVhFix} from './utils/ios-vh-fix';
+import {initModals} from './modules/modals/init-modals';
+
+window.addEventListener('DOMContentLoaded', () => {
+  iosVhFix();
+  window.addEventListener('load', () => {
+    initModals();
+  });
+});
+
+
 /* ACCORDION*/
 const accordionList = document.querySelectorAll('.accordion-item');
 
@@ -14,24 +25,22 @@ accordionList.forEach((event) =>
 
 /* ABOUT*/
 
-const textButton = document.querySelector('.about__button');
-const textHidden = document.querySelector('.content__hidden');
-const showHideButton = document.querySelector('[data-button="about"]');
+const moreButton = document.querySelector('.about__button');
+const textHidden = document.querySelector('.about__content');
+const shortClass = 'about__content--short';
 
 function closeText() {
-  textHidden.classList.remove('content__hidden');
-  textHidden.classList.add('content__shown');
-  showHideButton.textContent = 'Свернуть';
+  textHidden.classList.add(shortClass);
+  moreButton.textContent = 'Подробнее';
 }
 
 function openText() {
-  textHidden.classList.add('content__hidden');
-  textHidden.classList.remove('content__shown');
-  showHideButton.textContent = 'Подробнее';
+  textHidden.classList.remove(shortClass);
+  moreButton.textContent = 'Свернуть';
 }
 
-textButton.addEventListener('click', function () {
-  if (textButton.classList.contains('')) {
+moreButton.addEventListener('click', function () {
+  if (textHidden.classList.contains(shortClass)) {
     openText();
   } else {
     closeText();

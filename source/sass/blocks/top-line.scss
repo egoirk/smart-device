@@ -17,7 +17,7 @@
 }
 
 .top-line__content {
-  padding-right: 62px;
+  padding-right: 119px;
   display: grid;
   grid-template-columns: 215px 1fr 160px;
   grid-template-areas: "logo contact button";
@@ -34,7 +34,7 @@
     grid-template-columns: 35px 1fr;
     grid-template-areas: "logo contact";
     padding-top: 15px;
-    padding-right: 0;
+    padding-right: 46px;
   }
 }
 
@@ -51,7 +51,7 @@
 
   @include vp-1023 {
     justify-content: end;
-    justify-self: center;
+    justify-self: end;
     gap: 40px;
     margin-top: 10px;
   }
@@ -83,4 +83,9 @@
   @include vp-1023 {
     display: none;
   }
+}
+
+.top-line__button:hover,
+.top-line__button:focus {
+  background-color: $pacific-blue;
 }

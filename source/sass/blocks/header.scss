@@ -4,6 +4,7 @@
   background-color: $color-tory-blue;
   background-image: $header-bg, url("../img/header-bg.jpg");
   background-size: cover;
+  overflow: hidden;
 
   @include vp-1023 {
     background-image: $header-bg, url("../img/header-bg-tablet.jpg");
@@ -34,7 +35,7 @@
 
 .header__content {
   color: $color-default-white;
-  padding: 0 125px;
+  padding: 0 185px;
 }
 
 .header__title {

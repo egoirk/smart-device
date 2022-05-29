@@ -13,10 +13,10 @@
   }
 }
 
-.about__container {
+.about__wrapper {
   display: grid;
   grid-template-columns: 150px auto;
-  gap: 100px;
+  gap: 99px;
 
   @include vp-1023 {
     gap: 25px;
@@ -48,15 +48,9 @@
   margin: 0;
   padding: 0;
   margin-bottom: 18px;
-  font-family: "PT Mono", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 22px;
-  color: $black-pearl;
 
   @include vp-767 {
     margin-bottom: 17px;
-    font-size: 14px;
-    line-height: 19px;
   }
 }
 
@@ -75,12 +69,8 @@
   }
 }
 
-.content__hidden {
-  display: none;
-}
-
 .about__button {
-  margin-top: 20px;
+  margin-top: 38px;
   min-width: 180px;
   line-height: 17px;
   border: 1px solid #00b2ff;
@@ -97,7 +87,7 @@
   @include vp-767 {
     min-width: 160px;
     padding: 8px 15px;
-    margin-top: 19px;
+    margin-top: 12px;
   }
 }
 
@@ -105,4 +95,25 @@
   background-color: #00b2ff;
   color: #f8fdff;
   opacity: 1;
+}
+
+.about__content {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: $black-pearl;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.about__content--short {
+  height: calc(7 * 22px);
+  overflow: hidden;
+
+  @include vp-767 {
+    height: calc(11 * 19px);
+  }
 }
