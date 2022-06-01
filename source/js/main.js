@@ -39,10 +39,12 @@ function openText() {
   moreButton.textContent = 'Свернуть';
 }
 
-moreButton.addEventListener('click', function () {
-  if (textHidden.classList.contains(shortClass)) {
-    openText();
-  } else {
-    closeText();
-  }
-});
+if (moreButton) {
+  moreButton.addEventListener('click', function () {
+    if (textHidden.classList.contains(shortClass)) {
+      openText();
+    } else {
+      closeText();
+    }
+  });
+}

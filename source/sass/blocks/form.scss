@@ -15,7 +15,7 @@
 
   @include vp-767 {
     padding-top: 48px;
-    padding-bottom: 70px;
+    padding-bottom: 67px;
   }
 }
 
@@ -29,7 +29,7 @@
 
   @include vp-1023 {
     grid-template-columns: 1fr;
-    grid-row-gap: 27px;
+    grid-row-gap: 25px;
     max-width: 768px;
     margin: 0 auto;
   }
@@ -50,12 +50,12 @@
   position: absolute;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 35.4vw auto;
+  background-size: 26.4vw auto;
   background-image: url("../img/content/paper-airplane.png");
 
   @include retina {
     background-image: url("../img/content/paper-airplane@2x.png");
-    background-size: 35.4vw auto;
+    background-size: 26.4vw auto;
   }
 
   @include vp-1023 {
@@ -70,9 +70,10 @@
   font-size: 36px;
   line-height: 51px;
   font-weight: 400;
+  color: $color-default-white;
 
   @include vp-1023 {
-    margin-bottom: 5px;
+    margin-bottom: 7px;
   }
 
   @include vp-767 {
@@ -111,6 +112,7 @@
   @include vp-1023 {
     width: 100%;
     max-width: none;
+    padding: 0;
   }
 
   @include vp-767 {
@@ -129,6 +131,10 @@
   line-height: 22px;
   width: 100%;
 
+  @include vp-1023 {
+    padding: 14px 14px;
+  }
+
   @include vp-767 {
     padding: 14px 15px;
   }
@@ -139,7 +145,8 @@
   padding: 23px 16px;
 
   @include vp-1023 {
-    padding: 29px 16px 0;
+    padding: 29px 14px 0;
+    height: 155px;
   }
 
   @include vp-767 {
@@ -159,7 +166,11 @@
 }
 
 .form__fieldset--user {
-  width: 275px;
+  width: 47.5%;
+
+  @include vp-1023 {
+    width: 320px;
+  }
 
   @include vp-767 {
     width: 100%;
@@ -182,7 +193,7 @@
   letter-spacing: 0.05em;
   background: #041427;
   color: $color-default-white;
-  min-width: 265px;
+  width: 66%;
   height: 45px;
   border: none;
   border-radius: 3px;
@@ -193,10 +204,14 @@
     background-color: $jelly-bean;
   }
 
+  @include vp-1023 {
+    width: 48%;
+  }
+
   @include vp-767 {
     margin-right: 0;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 }
 
@@ -204,7 +219,12 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  margin-top: 8px;
+  margin-top: 9px;
+  gap: 8.5%;
+
+  @include vp-1023 {
+    gap: 12.5%;
+  }
 
   @include vp-767 {
     flex-direction: column;
@@ -214,10 +234,10 @@
 
 .form__checkbox-wrapper {
   order: 2;
-  padding-left: 50px;
 
   @include vp-1023 {
     padding-top: 9px;
+    padding-left: 0;
   }
 
   @include vp-767 {
@@ -260,6 +280,10 @@
   background-color: transparent;
   border: 1px solid $color-default-white;
   border-radius: 2px;
+
+  @include vp-1023 {
+    top: 12%;
+  }
 }
 
 .form__checkbox-wrapper input:checked + label::after {
@@ -273,8 +297,8 @@
   background-repeat: no-repeat;
   background-position: 0 0;
 
-  @include vp-767 {
-    top: 11px;
+  @include vp-1023 {
+    top: 8px;
   }
 }
 

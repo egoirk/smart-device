@@ -41,7 +41,7 @@
   }
 }
 
-.catalog__header--label {
+.catalog__label {
   @include vp-767 {
     display: none;
   }
@@ -53,11 +53,12 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 7%;
+  grid-column-gap: 85px;
+  grid-row-gap: 50px;
 
   @include vp-1023 {
     grid-template-columns: 1fr;
-    grid-gap: 30px;
+    grid-row-gap: 30px;
   }
 }
 

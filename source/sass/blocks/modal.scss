@@ -106,7 +106,7 @@
   color: $color-default-white;
 }
 
-.modal__form form {
+.modal-form form {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "input1" "input2" "textarea" "button" "checkbox";

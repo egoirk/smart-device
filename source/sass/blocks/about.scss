@@ -70,7 +70,7 @@
 }
 
 .about__button {
-  margin-top: 38px;
+  margin-top: 41px;
   min-width: 180px;
   line-height: 17px;
   border: 1px solid #00b2ff;
@@ -81,7 +81,7 @@
   letter-spacing: 0.05em;
 
   @include vp-1023 {
-    margin-top: 0;
+    margin-top: 19px;
   }
 
   @include vp-767 {
@@ -110,8 +110,12 @@
 }
 
 .about__content--short {
-  height: calc(7 * 22px);
+  height: calc(7 * 21.5px);
   overflow: hidden;
+
+  @include vp-1023 {
+    height: calc(12 * 21.5px);
+  }
 
   @include vp-767 {
     height: calc(11 * 19px);

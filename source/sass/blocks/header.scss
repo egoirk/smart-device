@@ -65,20 +65,23 @@
   margin: 0;
   line-height: 1.55;
   font-family: "PT Mono", sans-serif;
-  margin-bottom: 45px;
+  margin-bottom: 61px;
   max-width: 685px;
   font-size: 1.38rem;
+  max-height: 235px;
+  overflow: hidden;
 
   @include vp-1023 {
-    margin-bottom: 55px;
+    margin-bottom: 70px;
     max-width: 685px;
     font-size: 22px;
   }
 
   @include vp-767 {
-    margin-bottom: 45px;
+    margin-bottom: 52px;
     max-width: 425px;
     font-size: 14px;
+    max-height: 200px;
   }
 }
 

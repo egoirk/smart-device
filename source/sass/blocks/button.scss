@@ -20,6 +20,7 @@
   width: 410px;
   height: 55px;
   font-size: 18px;
+  padding: 16px 26px;
 
   @include vp-1023 {
     width: 410px;
@@ -30,6 +31,7 @@
     width: 270px;
     height: 40px;
     font-size: 14px;
+    padding: 11px 37px;
   }
 }
 
